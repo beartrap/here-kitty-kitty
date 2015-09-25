@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Code Count Homework</title>
+		<style>
+			p {font-family: Arial font-size: 20px;}
+			.highlight {background-color: red;}
+			h1 {color:blue;}
+			h3 {color:green;}
+		</style>
+
+		<script>
+
+function countWords(str){
+   var count = 0;
+   words = str.split(" "); 
+    for (i=0 ; i < words.length ; i++){
+       // inner loop -- do the count
+       if (words[i] != "")
+          count += 1; 
+    }
+  
+    var numChar = str.length - (count-1);
+
+   document.suggestions.results.value = 
+      "There are " +
+      count +
+      " words in the text string you entered! And there are " + numChar + " characters!";
+}	
+
+		</script>
+	</head>
+
+		<body>
+			<p style "color: #F0F0F0;">
+			<h1>Welcome to the input sample page!</h1></p>
+	<form name="suggestions" method="post">
+		<h3>Please enter your contact information here:</h3>
+		Name: <input type="text" name="userName"><br><br>
+		E-mail: <input type="text" name="userEmail"><br><br>
+		
+		<h3>Suggestions:</h3><br>
+		Do you find this page useful?
+			<input type="radio" name="utility" value="yes"> YES 
+			<input type="radio" name="utility" value="no"> NO
+			<br><br><br>
+			<p style="color: #0F0F0F;">
+			If <span class="highlight">'NO'</span> please enter suggestions for improvement here:<br></p>
+
+			<TEXTAREA name=inStr rows=5 cols=90></TEXTAREA><br>
+				<INPUT type=button value="Count" onClick="countWords(document.suggestions.inStr.value)";>
+				<br><br>
+		
+			Calculations:<br>
+			<TEXTAREA name=results rows=1 cols=90></TEXTAREA>
+
+	</form>
+		</body>
+</html

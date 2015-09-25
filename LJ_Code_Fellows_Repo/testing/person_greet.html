@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			var Person = function(nameToUse, personType){
+				this.name=nameToUse;
+				this.type=personType;
+				this.sayGreeting = function() {
+					//alert("Hi! I'm " + this.name);
+					//console.log("Hi! I'm " + this.name + "I'm a "this.type);
+					//var message = "Hi! I'm " + this.name;
+					return "Hi! I'm " + this.name;
+				}
+
+			}
+
+			var student = newPerson("John Doe", "student");
+			var instructor = newPerson("Jane Expert", "instructor");
+
+			student.sayGreeting();
+			instructor.sayGreeting();
+
+	</script></head>
+<body>
+<h1>Welcome to class!</h1>
+<h3>Instructor</h3>
+<p><script> document.write(instructor.sayGreeting());</script></p>
+<h3>Students</h3>
+<p><script> document.write(student.sayGreeting());</script></p>
+</body>
+
+</html>

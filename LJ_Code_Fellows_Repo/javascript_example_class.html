@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			var names=new Array("Mark", "John", "Jane", "Susan");
+
+			function showNames() {
+				for(var index=0; index<names.length; index++) {
+					alert("Name #"+(index+1)+": "+names[index]);
+				}
+			}
+
+			function countToThree() {
+				for(var counter=1; counter<=3; counter++) {
+					alert("Count: "+counter);
+				}
+			}
+
+			function countToFive() {
+				for(var counter=1; counter<=5; counter++) {
+					alert("Count: "+counter);
+					if (counter == 4) {
+						alert("Really?!?");
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Feedback Form</h1>
+		<form method="get">
+			Name: <input type="text" name="userName"><br>
+			E-Mail: <input type="text" name="email"><br>
+			Code Fellows Alumni: 
+				<input type="radio" name="alumni" value="yes"> Yes
+				<input type="radio" name="alumni" value="no"> No <br>
+			Feedback:<br>
+			<textarea name="feedback"></textarea><br>
+			<input type="submit"><br>
+			<br>
+			<input type="button" onclick="countToThree()" value="Count to 3"><br>
+			<input type="button" onclick="countToFive()" value="Count to 5"><br>
+			<input type="button" onclick="showNames()" value="Show Names"><br>
+		</form>
+	</body>
+</html>
